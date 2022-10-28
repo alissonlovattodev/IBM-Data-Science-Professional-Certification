@@ -7,4 +7,4 @@ deltaTheta_h = deltaTheta_h1 - deltaTheta_h2;
 theta_h = theta_o + deltaTheta_h;
 ageingRate = Math.exp((15000/(110+273) - (15000/(theta_h+273))));
 difAgeRate = ageingRate * time;
-lifeLoss += difAgeRdsadasa
+lifeLoss += difAgeRdsadasasasas

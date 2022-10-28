@@ -1,0 +1,10 @@
+//estimate the initial life loss (considering a total lifespan of 150.000 hours or 40 years of service);
+//lifeLoss = (currentTime.getFullYear() - fabracationYear) * 150000 / 40 * 60;
+theta_o = Math.pow(((1+Math.pow(K,2)*R)/(1+R)),x) * paperData.deltaTheta_or + theta_a_eq;
+deltaTheta_h1 = k21 * Math.pow(K, y) * paperData.deltaTheta_hr;
+deltaTheta_h2 = (k21 - 1) * Math.pow(K, y) * paperData.deltaTheta_hr;
+deltaTheta_h = deltaTheta_h1 - deltaTheta_h2;
+theta_h = theta_o + deltaTheta_h;
+ageingRate = Math.exp((15000/(110+273) - (15000/(theta_h+273))));
+difAgeRate = ageingRate * time;
+lifeLoss += difAgeRate;
